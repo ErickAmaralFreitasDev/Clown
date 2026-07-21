@@ -1,0 +1,14 @@
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.AssemblyInfoInputs.cache
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.AssemblyInfo.cs
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.csproj.CoreCompileInputs.cache
+C:\Users\erikw\Documents\Testes\Clown\bin\Debug\net10.0\Clown.exe
+C:\Users\erikw\Documents\Testes\Clown\bin\Debug\net10.0\Clown.deps.json
+C:\Users\erikw\Documents\Testes\Clown\bin\Debug\net10.0\Clown.runtimeconfig.json
+C:\Users\erikw\Documents\Testes\Clown\bin\Debug\net10.0\Clown.dll
+C:\Users\erikw\Documents\Testes\Clown\bin\Debug\net10.0\Clown.pdb
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.dll
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\refint\Clown.dll
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.pdb
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.genruntimeconfig.cache
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\ref\Clown.dll
