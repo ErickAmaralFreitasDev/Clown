@@ -1,6 +1,59 @@
 ﻿namespace Clown
 {
-    class TallGuy : IClown
+    interface IClown
+    {
+        public string FunnyThingIHave { get; }
+
+        void Honk();
+    }
+
+    interface IScaryClown : IClown
+    {
+        public string ScaryThingIHave { get; }
+
+        void ScareLittleChildren();
+    }
+
+    class FunnyFunny : IClown
+    {
+        private string funnyThingIHave;
+        public string FunnyThingIHave
+        {
+            get { return funnyThingIHave; }
+        }
+
+        public FunnyFunny(string funnyThingIHave)
+        {
+            this.funnyThingIHave = funnyThingIHave;
+        }
+
+        public void Honk()
+        {
+            Console.WriteLine("Hi! I have a " + funnyThingIHave);
+        }
+    }
+
+    class ScaryScary : FunnyFunny, IScaryClown
+    {
+        private int scaryThingCount;
+
+        public ScaryScary(string funnyThing, int scaryThingCount) : base(funnyThing)
+        {
+            this.scaryThingCount = scaryThingCount;
+        }
+
+        public string ScaryThingIHave
+        {
+            get { return $"{scaryThingCount} spiders"; }
+        }
+
+        public void ScareLittleChildren()
+        {
+            Console.WriteLine("BOO! I have a " + ScaryThingIHave);
+        }
+    }
+
+    /*class TallGuy : IClown
     {
         public string Name;
         public int Height;
@@ -15,27 +68,25 @@
         {
             Console.WriteLine("Honk Honk!");
         }
-    }
-
-    interface IClown
-    {
-        public string FunnyThingIHave { get; }
-
-        void Honk();
-    }
+    }*/
 
     class Program
     {
         static void Main(string[] args)
         {
-            TallGuy tallGuy = new TallGuy()
+            /*TallGuy tallGuy = new TallGuy()
             {
                 Name = "Big Joe",
                 Height = 72
             };
-            tallGuy.TalkAboutYourself();
-            Console.WriteLine($"I have {tallGuy.FunnyThingIHave}.");
-            tallGuy.Honk();
+            tallGuy.TalkAboutYourself();*/
+
+            IClown fingersTheClown = new ScaryScary("Big red nose", 14);
+            fingersTheClown.Honk();
+            if (fingersTheClown is IScaryClown iScaryClownReference)
+            {
+                iScaryClownReference.ScareLittleChildren();
+            }
         }
     }
 }

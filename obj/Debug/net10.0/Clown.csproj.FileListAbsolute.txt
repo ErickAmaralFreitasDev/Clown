@@ -12,3 +12,4 @@ C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\refint\Clown.dll
 C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.pdb
 C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.genruntimeconfig.cache
 C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\ref\Clown.dll
+C:\Users\erikw\Documents\Testes\Clown\obj\Debug\net10.0\Clown.sourcelink.json
