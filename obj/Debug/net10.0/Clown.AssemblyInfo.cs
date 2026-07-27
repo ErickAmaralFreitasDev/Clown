@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Clown")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1145373d1f7d12c464d850ec1cbfd048ff46e4d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3ae048b68f6ab52aba5bba9558cf6943ddf18b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Clown")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Clown")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

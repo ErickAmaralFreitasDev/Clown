@@ -5,6 +5,30 @@
         public string FunnyThingIHave { get; }
 
         void Honk();
+
+        protected static Random random = new Random();
+        private static int carCapacity = 12;
+
+        public static int CarCapacity
+        {
+            get { return carCapacity; }
+            set
+            {
+                if (value > 10)
+                {
+                    carCapacity = value;
+                }
+                else
+                {
+                    Console.Error.WriteLine($"{value} is too small for a clown car. It must be greater than 10.");
+                }
+            }
+        }
+
+        public static string ClownCarDescription()
+        {
+            return $"A car clown with {random.Next(CarCapacity / 2, CarCapacity)} clowns in it.";
+        }
     }
 
     interface IScaryClown : IClown
@@ -12,6 +36,14 @@
         public string ScaryThingIHave { get; }
 
         void ScareLittleChildren();
+
+        void ScareAdults()
+        {
+            Console.WriteLine($@"I am an ancient evil that will haunt your dreams.
+Behold my terrifying necklace with {random.Next(4, 10)} of my last victims' fingers
+Oh, also, before I forget, ");
+            ScareLittleChildren();
+        }
     }
 
     class FunnyFunny : IClown
@@ -35,7 +67,7 @@
 
     class ScaryScary : FunnyFunny, IScaryClown
     {
-        private int scaryThingCount;
+        private readonly int scaryThingCount;
 
         public ScaryScary(string funnyThing, int scaryThingCount) : base(funnyThing)
         {
@@ -81,11 +113,13 @@
             };
             tallGuy.TalkAboutYourself();*/
 
+            IClown.CarCapacity = 18;
+            Console.WriteLine(IClown.ClownCarDescription());
             IClown fingersTheClown = new ScaryScary("Big red nose", 14);
             fingersTheClown.Honk();
             if (fingersTheClown is IScaryClown iScaryClownReference)
             {
-                iScaryClownReference.ScareLittleChildren();
+                iScaryClownReference.ScareAdults();
             }
         }
     }
