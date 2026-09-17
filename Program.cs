@@ -25,10 +25,8 @@
             }
         }
 
-        public static string ClownCarDescription()
-        {
-            return $"A car clown with {random.Next(CarCapacity / 2, CarCapacity)} clowns in it.";
-        }
+        public static string ClownCarDescription() => $"A car clown with {random.Next(CarCapacity / 2, CarCapacity)} clowns in it.";
+
     }
 
     interface IScaryClown : IClown
@@ -37,11 +35,8 @@
 
         void ScareLittleChildren();
 
-        void ScareAdults()
-        {
-            Console.WriteLine($@"I am an ancient evil that will haunt your dreams.
-Behold my terrifying necklace with {random.Next(4, 10)} of my last victims' fingers
-Oh, also, before I forget, ");
+        void ScareAdults() {
+            Console.WriteLine($@"I am an ancient evil that will haunt your dreams. Behold my terrifying necklace with {random.Next(4, 10)} of my last victims' fingers. Oh, also, before I forget, "); 
             ScareLittleChildren();
         }
     }
@@ -51,7 +46,7 @@ Oh, also, before I forget, ");
         private string funnyThingIHave;
         public string FunnyThingIHave
         {
-            get { return funnyThingIHave; }
+            get => funnyThingIHave; 
         }
 
         public FunnyFunny(string funnyThingIHave)
@@ -59,10 +54,7 @@ Oh, also, before I forget, ");
             this.funnyThingIHave = funnyThingIHave;
         }
 
-        public void Honk()
-        {
-            Console.WriteLine("Hi! I have a " + funnyThingIHave);
-        }
+        public void Honk() => Console.WriteLine("Hi! I have a " + funnyThingIHave);
     }
 
     class ScaryScary : FunnyFunny, IScaryClown
@@ -76,13 +68,11 @@ Oh, also, before I forget, ");
 
         public string ScaryThingIHave
         {
-            get { return $"{scaryThingCount} spiders"; }
+            get => $"{scaryThingCount} spiders";
         }
 
-        public void ScareLittleChildren()
-        {
-            Console.WriteLine("BOO! I have a " + ScaryThingIHave);
-        }
+        public void ScareLittleChildren() => Console.WriteLine("BOO! I have a " + ScaryThingIHave);
+
     }
 
     /*class TallGuy : IClown
